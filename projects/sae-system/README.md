@@ -230,29 +230,23 @@ Examples include:
 ---
 
 ## Repository Structure
-sae-system
-│
-├── README.md
-│
-├── architecture
-│     system-overview.md
-│
-├── workflows
-│     pdca-workflow.md
-│
-├── docs
-│     requirements-summary.md
-│
-└── diagrams
-      system-architecture.png
-       ```mermaid
-            graph TD;
-                A-->B;
-                A-->C;
-                B-->D;
-                C-->D;
-        ```
+    sae-system
+    │
+    ├── README.md
+    │
+    ├── architecture
+    │     system-overview.md
+    │
+    ├── workflows
+    │     pdca-workflow.md
+    │
+    ├── docs
+    │     requirements-summary.md
+    │
+    └── diagrams
+        ![SAE System Architecture](./diagrams/system-architecture.png)
 
+ ```mermaid info```
 ---
 
 ## Notes
