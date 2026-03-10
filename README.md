@@ -1,46 +1,37 @@
-# Lam Pham — Project Portfolio
+# Pham Minh Lam — Project Portfolio
 
-This repository contains project documentation and technical writeups backing my CV. Each project folder includes an English-language overview covering the problem, architecture, my specific contributions, and measurable outcomes — alongside the original source documents as evidence.
+Documentation and writeups for the main projects I worked on at AQ Tech, linked from my CV as supporting evidence.
 
 ---
 
 ## Projects
 
-| Project | Domain | Role | Stack |
+| Project | Domain | My Role | Stack |
 |---|---|---|---|
-| [AQ EduSAE](./projects/sae/) | University EdTech SaaS | Tech Lead + BA | .NET, React, PostgreSQL, Docker |
-| [AQ EduEAQ](./projects/eaq/) | Accreditation Management | Tech Lead + BA | .NET, React, PostgreSQL, Docker |
+| [AQ EduSAE](./projects/sae/) | Student Activity & Conduct Scoring | Developer + Co-manage | .NET · React · SQL Server· IIS |
+| [AQ EduEAQ](./projects/eaq/) | Accreditation Evidence Management | Developer + Co-manage | .NET 9 · React · SQL Server · IIS |
 
 ---
 
 ## About Me
 
-**Nguyen Phuoc Thanh (Lam)**
-Software Engineer · Ho Chi Minh City, Vietnam
-~2 years at AQ Tech · B2 English (IELTS 6.5)
+Software Engineer, Ho Chi Minh City · 2 years at AQ Tech · B2 English (IELTS 6.5)
 
-**Core stack:** C# / .NET · Node.js · TypeScript · React · Angular · PostgreSQL · SQL Server · Docker · Azure DevOps
-
-**What I bring beyond code:** I've led teams of up to 17 developers on multi-stakeholder enterprise systems — owning the full delivery lifecycle from requirements gathering and BRD authorship through architecture design, sprint management, and production deployment.
+**Stack:** C# / .NET · React · TypeScript · Node.js · SQL Server · Azure DevOps
 
 ---
 
-## Repository Structure
+## Structure
 
 ```
 portfolio/
-├── README.md               ← you are here
+├── README.md
+├── cv-highlights.md       ← CV bullets by role type (FE / BE / Fullstack)
 └── projects/
     ├── sae/
-    │   ├── README.md       ← English project overview
-    │   └── docs/           ← original Vietnamese BRD/specs
+    │   ├── README.md
+    │   └── docs/          ← original BRD (Vietnamese)
     └── eaq/
         ├── README.md
-        └── docs/
+        └── docs/          ← original URD (Vietnamese)
 ```
-
----
-
-## CV
-
-Available on request.
