@@ -246,7 +246,6 @@ Examples include:
     └── diagrams
         ![SAE System Architecture](./diagrams/system-architecture.png)
 
- ```mermaid info```
 ---
 
 ## Notes
