@@ -12,7 +12,7 @@
 Multi-university SaaS portal that replaces a manual, end-of-semester self-declaration workflow for student conduct scoring (*điểm rèn luyện*). Before this system, students submitted their own scores at the end of semester — generating 10,000+ uploaded evidence files per cycle that staff couldn't realistically verify.
 
 The replacement is a real-time cycle: universities plan activities upfront, students register and attend, staff record scores via QR/card or import, advisors monitor progress mid-semester, and a review council finalizes results. Compliant with Vietnamese MoET Circular 16/2015.
-![Architect](projects/sae/docs/images/sae-system.png)
+![Architect](./docs/images/sae-system.png)
 ---
 
 ## What I worked on
