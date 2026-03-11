@@ -7,32 +7,49 @@
 
 ---
 
-## What the system does
+## System Overview
 
-Multi-university SaaS portal that replaces a manual, end-of-semester self-declaration workflow for student conduct scoring (*điểm rèn luyện*). Before this system, students submitted their own scores at the end of semester — generating 10,000+ uploaded evidence files per cycle that staff couldn't realistically verify.
+AQ EduSAE is a student activity and conduct score management portal used by universities.
 
-The replacement is a real-time cycle: universities plan activities upfront, students register and attend, staff record scores via QR/card or import, advisors monitor progress mid-semester, and a review council finalizes results. Compliant with Vietnamese MoET Circular 16/2015.
+The system replaces a manual, end-of-semester self-reporting process where students submitted their conduct scores along with evidence files.
+
+Previously this process generated **10,000+ uploaded files per semester**, creating a heavy verification burden for university staff.
+
+The new platform introduces a structured workflow:
+
+1. Universities define extracurricular activities
+2. Students register for activities
+3. Participation is recorded through attendance tools
+4. Advisors monitor progress during the semester
+5. Evaluation councils review and finalize conduct scores
+
+The system follows the requirements defined in **Vietnamese MoET Circular 16/2015**.
 
 ---
 
-## What I worked on
+## System Architecture
 
-**UI & Components**
-- Built role-specific dashboards for 6 user types (students, advisors, homeroom teachers, student affairs staff, council members, admins)
-- Designed and maintained a reusable component library (tables, forms, badges, loading states) shared across all dashboards
-- Implemented semester-based activity listing with paginated API fetching and loading state management
+![SAE System Architecture](./docs/images/sae-system.png)
 
-**API Integration**
-- Integrated EduSoft.NET API for academic-grade-to-conduct-score sync
+This diagram shows the high-level interaction between users, frontend applications, backend services, and external integrations.
 
-| Pages | Purpose |
-|---|---|
-| **Register Extracurricular Activity Plan** | Faculty, Club, Student support, etc... to register activity |
-| **AnnualPlan PlanApproval** | Approving registered activity |
-| **AnnualPlan StudentAffair** | Student affair to do CRUD method on activity of this and other semester in this year EX: 20251, 20252|
-| **ExecutePlan ConfigRegistration** | Setting time for classes to register into activity  |
-| **Current Semester** | CRUD on this current semester events |
+---
 
+## Key Features
+
+- Activity planning
+- Student participation tracking
+- Evaluation workflow
+
+---
+
+## System Modules
+
+The platform includes multiple modules supporting the full lifecycle of student activities and evaluation.
+
+See full module structure:
+
+docs/system-modules.md
 
 **Bugs & Performance**
 - Diagnosed and fixed a circular dependency between TanStack Store and API calls that was causing significant UI slowness
@@ -40,12 +57,108 @@ The replacement is a real-time cycle: universities plan activities upfront, stud
 **Team coordination**
 - Formally assigned to review intern PRs and break BRD specs down into dev tasks on this project
 
+
 ---
 
-## Stack
+## Project Status
 
-`React` · `TypeScript` · `TanStack Store` · `C#/.NET` · `PostgreSQL` · `Docker` · `Azure DevOps`
+The system is currently **in development**.
 
+Current implementation characteristics:
+
+- Monorepo architecture
+- React frontend + .NET backend
+- SQL Server database
+- No containerization yet
+
+Future improvements planned by the team include:
+
+- improved deployment automation
+- infrastructure containerization
+- further modularization of backend services
+
+---
+
+## My Contributions
+
+### Frontend Development
+
+- Built role-specific dashboards for six user types:
+  - Students
+  - Academic advisors
+  - Homeroom teachers
+  - Student affairs staff
+  - Evaluation council members
+  - System administrators
+
+- Developed reusable UI components shared across dashboards:
+  - data tables
+  - form components
+  - status badges
+  - loading and skeleton states
+
+- Implemented semester-based activity listing with paginated API fetching.
+
+---
+
+### System Integration
+
+- Integrated EduSoft.NET API for academic-grade synchronization with conduct scoring workflows.
+
+---
+
+### Performance and Debugging
+
+- Diagnosed and resolved a circular dependency between TanStack Store and API calls that caused significant UI performance issues.
+
+---
+
+### Team Coordination
+
+- Reviewed intern pull requests.
+- Helped translate BRD specifications into development tasks.
+- Coordinated feature implementation across the intern development team.
+**UI & Components**
+- Reviewed intern pull requests.
+- Translated BRD specifications into development tasks.
+- Coordinated feature implementation across the intern development team.
+
+**API Integration**
+
+## External Integration
+
+### EduSoft.NET API
+
+The system integrates with the EduSoft student information system to synchronize academic results used in conduct score evaluation.
+
+Integration responsibilities include:
+
+- syncing student academic results
+- mapping academic performance to conduct score criteria
+- ensuring student academic status is available during evaluation
+
+This integration reduces manual data entry and keeps the evaluation process consistent with official academic records.
+
+
+---
+
+## Technology Stack
+
+Frontend
+- React
+- TypeScript
+- TanStack Store
+
+Backend
+- C#
+- .NET
+
+Database
+- Microsoft SQL Server
+
+Infrastructure
+- Monorepo architecture
+- Azure DevOps for CI/CD
 ---
 
 ## Spec document
